@@ -5,6 +5,8 @@ import java.util.Date;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.cisc181.exceptions.PersonException;
+
 /*
  * comment
  */
@@ -139,6 +141,18 @@ public abstract class Person implements java.io.Serializable {
 		System.out.println("age is " + age);
 
 		return age;
-
 	}
+
+	public Person EvaluateAge(Person p) throws PersonException 
+	{
+		
+		if (PrintAge() > 100)
+		{
+			throw new PersonException(p);
+		}
+		//else if (phone_number != )
+		//{
+			//throw new PersonException(p);
+		return p;
+		}
 }
